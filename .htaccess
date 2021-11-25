@@ -1,0 +1,8 @@
+# Chacing selama 24 jam
+<filesMatch ".(css|js|ico|woff2)$">
+Header set Cache-Control "max-age=86400, public"
+</filesMatch>
+
+RewriteEngine on
+RewriteCond $1 !^(index\.php|assets|upload|robots\.txt)
+RewriteRule ^(.*)$ /gudang/index.php/$1
